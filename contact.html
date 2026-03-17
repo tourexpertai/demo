@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us – Tour Expert AI</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Get in touch with Tour Expert AI. We're here to help tour agents get started, answer your questions, and support your AI chatbot journey."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.tourexpertai.com/contact"/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2325D366'/%3E%3Cpath d='M32 10C22.06 10 14 18.06 14 28c0 13.25 18 34 18 34s18-20.75 18-34c0-9.94-8.06-18-18-18zm0 24.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z' fill='white'/%3E%3C/svg%3E"/>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="tour-expert-ai.css"/>
+
+  <style>
+    /* ── CONTACT PAGE SPECIFIC STYLES ── */
+
+    .contact-hero {
+      padding: 9rem 5% 5rem;
+      text-align: center;
+      background: var(--sand-light);
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-hero::before {
+      content: '';
+      position: absolute; top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(37,211,102,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .contact-hero::after {
+      content: '';
+      position: absolute; bottom: -100px; left: -100px;
+      width: 450px; height: 450px;
+      background: radial-gradient(circle, rgba(18,140,126,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .contact-hero .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.25);
+      color: var(--teal-dark); padding: 0.4rem 1rem; border-radius: 50px;
+      font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+    .contact-hero .hero-badge .dot {
+      width: 7px; height: 7px; background: var(--teal);
+      border-radius: 50%; animation: pulse 2s infinite;
+    }
+    .contact-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
+      font-weight: 900; line-height: 1.15; color: var(--ink);
+      margin-bottom: 1.2rem;
+      animation: fadeUp 0.8s 0.35s ease both;
+    }
+    .contact-hero h1 em { font-style: italic; color: var(--teal); }
+    .contact-hero p {
+      font-size: 1.05rem; color: var(--muted);
+      max-width: 500px; margin: 0 auto;
+      line-height: 1.7; font-weight: 300;
+      animation: fadeUp 0.8s 0.5s ease both;
+    }
+
+    /* ── CONTACT GRID ── */
+    .contact-section {
+      background: white;
+      padding: 5rem 5%;
+    }
+    .contact-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1.6fr; gap: 5rem;
+      align-items: start;
+    }
+
+    /* ── LEFT: INFO PANEL ── */
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+
+    .contact-info-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem; font-weight: 700; color: var(--ink);
+      line-height: 1.3;
+	  margin-bottom : 15px;
+    }
+    .contact-info-sub {
+      font-size: 0.93rem; color: var(--muted);
+      line-height: 1.7; margin-top: -1rem;
+    }
+
+    .contact-card {
+      background: var(--sand-light);
+      border: 1px solid rgba(37,211,102,0.15);
+      border-radius: 18px; padding: 1.4rem 1.6rem;
+      display: flex; align-items: flex-start; gap: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(37,211,102,0.12);
+    }
+    .contact-card-icon {
+      width: 46px; height: 46px; border-radius: 13px;
+      background: rgba(37,211,102,0.12);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; flex-shrink: 0;
+    }
+    .contact-card-label {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 0.2rem;
+    }
+    .contact-card-value {
+      font-size: 0.95rem; font-weight: 600; color: var(--ink);
+    }
+    .contact-card-note {
+      font-size: 0.8rem; color: var(--muted); margin-top: 0.15rem;
+    }
+
+    .response-badge {
+      display: flex; align-items: center; gap: 0.8rem;
+      background: rgba(37,211,102,0.08);
+      border: 1px solid rgba(37,211,102,0.2);
+      border-radius: 14px; padding: 1rem 1.4rem;
+      font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5;
+    }
+    .response-badge-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .response-badge strong { color: var(--teal-dark); }
+
+    /* ── RIGHT: FORM ── */
+    .contact-form-wrap {
+      background: var(--sand-light);
+      border: 1px solid rgba(37,211,102,0.15);
+      border-radius: 24px; padding: 2.8rem;
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+    .form-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; font-weight: 700; color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .form-sub {
+      font-size: 0.88rem; color: var(--muted); margin-bottom: 2rem; line-height: 1.6;
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1.2rem; }
+    .form-group label {
+      font-size: 0.82rem; font-weight: 600; color: var(--ink-soft);
+      letter-spacing: 0.03em;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%; padding: 0.8rem 1rem;
+      border: 1.5px solid rgba(37,211,102,0.2);
+      border-radius: 12px;
+      background: white;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.93rem; color: var(--ink);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(37,211,102,0.12);
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: #aab7bf; }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-group select { appearance: none; cursor: pointer; }
+
+    .form-submit {
+      width: 100%; padding: 0.95rem;
+      background: var(--teal); color: white;
+      border: none; border-radius: 50px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem; font-weight: 600; cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+      margin-top: 0.5rem;
+    }
+    .form-submit:hover {
+      background: var(--teal-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37,211,102,0.4);
+    }
+    .form-submit:active { transform: translateY(0); }
+
+    .form-privacy {
+      text-align: center; margin-top: 1rem;
+      font-size: 0.78rem; color: var(--muted); line-height: 1.5;
+    }
+    .form-privacy a { color: var(--teal); text-decoration: none; }
+    .form-privacy a:hover { text-decoration: underline; }
+
+    /* Success state */
+    .form-success {
+      display: none;
+      text-align: center; padding: 3rem 2rem;
+      animation: fadeUp 0.5s ease both;
+    }
+    .form-success-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+    .form-success h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem; font-weight: 700; color: var(--ink);
+      margin-bottom: 0.6rem;
+    }
+    .form-success p { font-size: 0.93rem; color: var(--muted); line-height: 1.65; }
+
+    /* ── FAQ STRIP ── */
+    .faq-section {
+      background: var(--sand-light);
+      padding: 5rem 5%;
+    }
+    .faq-inner { max-width: 760px; margin: 0 auto; }
+    .faq-header { text-align: center; margin-bottom: 3rem; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 0.8rem; }
+    .faq-item {
+      background: white;
+      border: 1px solid rgba(37,211,102,0.15);
+      border-radius: 16px; overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .faq-item:hover { box-shadow: 0 6px 24px rgba(37,211,102,0.1); }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 1.5rem; gap: 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.97rem; font-weight: 600; color: var(--ink);
+      text-align: left;
+    }
+    .faq-chevron {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(37,211,102,0.1);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; transition: background 0.2s, transform 0.25s;
+      color: var(--teal); font-size: 0.85rem;
+    }
+    .faq-item.open .faq-chevron {
+      background: var(--teal); color: white; transform: rotate(180deg);
+    }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.25s ease;
+      font-size: 0.9rem; color: var(--muted); line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding: 0 1.5rem 1.3rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form-wrap { padding: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+    </div>
+    Tour Expert AI
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#how">How it Works</a></li>
+    <li><a href="index.html#features">Features</a></li>
+    <li><a href="index.html#campaign">WA Campaign</a></li>
+  </ul>
+  <a href="index.html#cta" class="nav-cta">Try Now</a>
+</nav>
+
+<!-- CONTACT HERO -->
+<section class="contact-hero">
+  <div class="hero-badge"><span class="dot"></span> We reply within 24 hours</div>
+  <h1>Let's get you <em>up and running</em></h1>
+  <p>Have a question about Tour Expert AI? Want to see a demo or discuss a custom plan? We'd love to hear from you.</p>
+</section>
+
+<!-- CONTACT MAIN -->
+<section class="contact-section">
+  <div class="contact-inner">
+
+    <!-- LEFT: Info -->
+    <div class="contact-info">
+      <div>
+        <div class="section-label">Get In Touch</div>
+        <div class="contact-info-title">We're here to help your agency grow</div>
+        <p class="contact-info-sub">Whether you're just exploring or ready to sign up, our team is happy to guide you every step of the way.</p>
+      </div>
+
+      <a href="/cdn-cgi/l/email-protection#b6ded3dadad9f6c2d9c3c4d3cec6d3c4c2d7df98d5d9db" class="contact-card">
+        <div class="contact-card-icon">✉️</div>
+        <div>
+          <div class="contact-card-label">Email Us</div>
+          <div class="contact-card-value"><span class="__cf_email__" data-cfemail="a3cbc6cfcfcce3d7ccd6d1c6dbd3c6d1d7c2ca8dc0ccce">[email&#160;protected]</span></div>
+          <div class="contact-card-note">For general enquiries & support</div>
+        </div>
+      </a>
+
+      <a href="https://wa.me/60102509191" target="_blank" class="contact-card">
+        <div class="contact-card-icon">💬</div>
+        <div>
+          <div class="contact-card-label">WhatsApp</div>
+          <div class="contact-card-value">+60 10-250 9191</div>
+          <div class="contact-card-note">Mon – Fri, 9am – 6pm</div>
+        </div>
+      </a>
+
+      <div class="contact-card" style="cursor: default;">
+        <div class="contact-card-icon">📍</div>
+        <div>
+          <div class="contact-card-label">Based In</div>
+          <div class="contact-card-value">Kuala Lumpur, Malaysia</div>
+          <div class="contact-card-note">Serving tour agents across Malaysia</div>
+        </div>
+      </div>
+
+      <div class="response-badge">
+        <div class="response-badge-icon">⚡</div>
+        <div><strong>Quick response guaranteed.</strong> We typically reply within a few hours on business days. For urgent help, WhatsApp is the fastest way to reach us.</div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Form -->
+    <div class="contact-form-wrap">
+      <div id="contactFormContent">
+        <div class="form-title">Send us a message</div>
+        <p class="form-sub">Fill in the form below and our team will get back to you shortly.</p>
+
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name *</label>
+            <input type="text" id="fname" name="fistName" placeholder="e.g. Ahmad" required />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name *</label>
+            <input type="text" id="lname" name="lastName" placeholder="e.g. Razif" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="you@youragency.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">WhatsApp / Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+60 12-345 6789" />
+        </div>
+
+        <div class="form-group">
+          <label for="agency">Travel Agency Name</label>
+          <input type="text" id="agency" name="companyName" placeholder="e.g. Wanderlust Travel Sdn Bhd" />
+        </div>
+
+        <!-- <div class="form-group">
+          <label for="topic">What can we help you with? *</label>
+          <select id="topic" required>
+            <option value="" disabled selected>Select a topic…</option>
+            <option value="demo">I'd like to request a demo</option>
+            <option value="trial">I want to start the free trial</option>
+            <option value="pricing">I have a question about pricing</option>
+            <option value="technical">Technical / setup support</option>
+            <option value="campaign">WhatsApp campaign enquiry</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" placeholder="Tell us a bit about your agency and what you're looking for…" required></textarea>
+        </div>
+		-->
+        <button type="submit" class="form-submit">Send Message →</button>
+
+        <p class="form-privacy">
+          By submitting this form you agree to our <a href="privacy-policy.html">Privacy Policy</a>. We will never share your information with third parties.
+        </p>
+        </form>
+      </div>
+
+      <!-- Success State -->
+      <div class="form-success" id="formSuccess">
+        <div class="form-success-icon">🎉</div>
+        <h3>Message sent!</h3>
+        <p>Thanks for reaching out. Our team will get back to you within 24 hours.<!--<br/>In the meantime, feel free to WhatsApp us for anything urgent.</p>
+        <a href="https://wa.me/60102509191" target="_blank" class="btn-primary" style="display:inline-block; margin-top:1.8rem;">
+          Chat on WhatsApp
+        </a>-->
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <div class="section-label">Quick Answers</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How long does it take to set up Tour Expert AI?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-answer">Most agents are fully set up within 30 minutes. You simply upload your tour catalogue (PDF, Excel, or Word), and the AI processes it automatically. No technical skills required.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Is my tour catalogue data kept private?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-answer">Absolutely. Your uploaded catalogue is private to your account only. Tour Expert AI never shares or mixes your data with other agents. Your packages, your brand — always.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can I try it before committing?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-answer">Yes! We are offering a free pilot programme with no credit card required. You'll have full access to all features including the chatbot and WhatsApp campaign tools during the trial period.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What formats can I upload for my tour packages?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-answer">Tour Expert AI supports PDF, Microsoft Excel (.xlsx), and Microsoft Word (.docx) files. You can upload multiple files and update them anytime from your dashboard.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do your AI offer support in other language besides English?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-answer">Yes! Our AI is bilingual in other languages besides English. The AI chatbot is configured to respond in Bahasa Malaysia, English, or Mandarin — depending on your customer base.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Tour Expert AI</div>
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="contact.html">Contact Us</a>
+    <!--<a href="#">Support</a>-->
+  </div>
+  <div class="footer-copy">© 2026 Tour Expert AI. All rights reserved.</div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString()
+    })
+    .then(() => {
+      document.getElementById('contactFormContent').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    })
+    .catch(() => alert('Something went wrong. Please try again or WhatsApp us directly.'));
+  }
+</script>
+
+</body>
+</html>

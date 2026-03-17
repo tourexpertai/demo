@@ -209,11 +209,10 @@
 
             try {
                 const activeChatId = getOrUpdateChatId();
-                const response = await fetch('http://44.201.192.183:5667/v1/chatbot/chat_with_api_token', {
+                const response = await fetch('/.netlify/functions/chat', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': 'Bearer 20fa5866-4839-439f-ba53-8e73cd88b10d'
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
                         chat_id: activeChatId,

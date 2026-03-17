@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms of Service – Tour Expert AI</title>
+
+  <meta name="description" content="Tour Expert AI Terms of Service — the rules and conditions governing your use of our platform."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.tourexpertai.com/terms-of-service"/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2325D366'/%3E%3Cpath d='M32 10C22.06 10 14 18.06 14 28c0 13.25 18 34 18 34s18-20.75 18-34c0-9.94-8.06-18-18-18zm0 24.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z' fill='white'/%3E%3C/svg%3E"/>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="tour-expert-ai.css"/>
+
+  <style>
+    /* ── TERMS PAGE STYLES ── */
+
+    .terms-hero {
+      padding: 9rem 5% 4rem;
+      background: var(--sand-light);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .terms-hero::before {
+      content: '';
+      position: absolute; top: -180px; right: -180px;
+      width: 550px; height: 550px;
+      background: radial-gradient(circle, rgba(37,211,102,0.11) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .terms-hero::after {
+      content: '';
+      position: absolute; bottom: -80px; left: -80px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(18,140,126,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .terms-hero .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.25);
+      color: var(--teal-dark); padding: 0.4rem 1rem; border-radius: 50px;
+      font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+    .terms-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+      font-weight: 900; line-height: 1.15; color: var(--ink);
+      margin-bottom: 1rem;
+      animation: fadeUp 0.8s 0.35s ease both;
+    }
+    .terms-hero h1 em { font-style: italic; color: var(--teal); }
+    .terms-meta {
+      font-size: 0.85rem; color: var(--muted);
+      animation: fadeUp 0.8s 0.5s ease both;
+    }
+
+    /* ── LAYOUT ── */
+    .terms-layout {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 260px 1fr;
+      gap: 4rem; padding: 4rem 5% 6rem;
+      align-items: start;
+    }
+
+    /* ── SIDEBAR TOC ── */
+    .terms-toc {
+      position: sticky; top: 100px;
+      background: white;
+      border: 1px solid rgba(37,211,102,0.15);
+      border-radius: 20px; padding: 1.6rem;
+    }
+    .toc-title {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--teal);
+      margin-bottom: 1.2rem;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
+    .toc-list a {
+      display: block; font-size: 0.85rem; color: var(--muted);
+      text-decoration: none; padding: 0.4rem 0.7rem;
+      border-radius: 8px; transition: background 0.15s, color 0.15s;
+      font-weight: 500;
+    }
+    .toc-list a:hover { background: rgba(37,211,102,0.08); color: var(--teal-dark); }
+    .toc-list a.active { background: rgba(37,211,102,0.12); color: var(--teal-dark); font-weight: 600; }
+
+    /* ── CONTENT ── */
+    .terms-content { display: flex; flex-direction: column; gap: 2.5rem; }
+
+    .terms-section {
+      background: white;
+      border: 1px solid rgba(37,211,102,0.12);
+      border-radius: 20px; padding: 2.4rem;
+      scroll-margin-top: 100px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .terms-section-header {
+      display: flex; align-items: center; gap: 1rem; margin-bottom: 1.4rem;
+    }
+    .terms-section-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: rgba(37,211,102,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; flex-shrink: 0;
+    }
+    .terms-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem; font-weight: 700; color: var(--ink);
+    }
+
+    .terms-section p {
+      font-size: 0.93rem; color: var(--ink-soft);
+      line-height: 1.8; margin-bottom: 1rem;
+    }
+    .terms-section p:last-child { margin-bottom: 0; }
+
+    .terms-section ul {
+      list-style: none; display: flex; flex-direction: column;
+      gap: 0.6rem; margin: 0.8rem 0 1rem;
+    }
+    .terms-section ul li {
+      display: flex; align-items: flex-start; gap: 0.65rem;
+      font-size: 0.92rem; color: var(--ink-soft); line-height: 1.65;
+    }
+    .terms-section ul li::before {
+      content: '–'; color: var(--teal); font-weight: 700;
+      flex-shrink: 0; margin-top: 0.05rem;
+    }
+
+    .terms-section h3 {
+      font-size: 1rem; font-weight: 700; color: var(--ink);
+      margin: 1.6rem 0 0.5rem;
+    }
+    .terms-section h3:first-of-type { margin-top: 0.2rem; }
+
+    .highlight-box {
+      background: rgba(37,211,102,0.07);
+      border: 1px solid rgba(37,211,102,0.2);
+      border-radius: 12px; padding: 1.1rem 1.3rem;
+      font-size: 0.88rem; color: var(--teal-dark);
+      line-height: 1.65; margin: 1rem 0;
+      display: flex; gap: 0.7rem; align-items: flex-start;
+    }
+    .highlight-box-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+    .warning-box {
+      background: rgba(255, 200, 60, 0.08);
+      border: 1px solid rgba(255, 200, 60, 0.35);
+      border-radius: 12px; padding: 1.1rem 1.3rem;
+      font-size: 0.88rem; color: #7a5c00;
+      line-height: 1.65; margin: 1rem 0;
+      display: flex; gap: 0.7rem; align-items: flex-start;
+    }
+    .warning-box-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+    .plan-table {
+      width: 100%; border-collapse: collapse;
+      margin: 1.2rem 0; font-size: 0.88rem;
+    }
+    .plan-table th {
+      background: rgba(37,211,102,0.08);
+      color: var(--teal-dark); font-weight: 700;
+      padding: 0.7rem 1rem; text-align: left;
+      border-bottom: 2px solid rgba(37,211,102,0.2);
+    }
+    .plan-table td {
+      padding: 0.65rem 1rem; color: var(--ink-soft);
+      border-bottom: 1px solid rgba(37,211,102,0.08);
+    }
+    .plan-table tr:last-child td { border-bottom: none; }
+    .plan-table tr:hover td { background: rgba(37,211,102,0.03); }
+
+    .contact-strip {
+      background: linear-gradient(135deg, var(--teal-dark), var(--teal));
+      border-radius: 20px; padding: 2.2rem 2.4rem;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 2rem; flex-wrap: wrap;
+    }
+    .contact-strip-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 0.3rem;
+    }
+    .contact-strip-text p { font-size: 0.88rem; color: rgba(255,255,255,0.8); line-height: 1.6; }
+    .contact-strip .btn-primary {
+      background: white; color: var(--teal-dark);
+      box-shadow: none; white-space: nowrap;
+    }
+    .contact-strip .btn-primary:hover { background: var(--sand-light); transform: translateY(-2px); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .terms-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem; padding: 2.5rem 5% 5rem;
+      }
+      .terms-toc { position: static; }
+      .plan-table { font-size: 0.8rem; }
+      .plan-table th, .plan-table td { padding: 0.5rem 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+    </div>
+    Tour Expert AI
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#how">How it Works</a></li>
+    <li><a href="index.html#features">Features</a></li>
+    <li><a href="index.html#campaign">WA Campaign</a></li>
+  </ul>
+  <a href="index.html#cta" class="nav-cta">Try Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="terms-hero">
+  <div class="hero-badge">📄 Legal Agreement</div>
+  <h1>Terms of <em>Service</em></h1>
+  <p class="terms-meta">Last updated: 1 March 2026 &nbsp;·&nbsp; Effective: 1 March 2026</p>
+</section>
+
+<!-- MAIN LAYOUT -->
+<div class="terms-layout">
+
+  <!-- SIDEBAR TOC -->
+  <aside class="terms-toc">
+    <div class="toc-title">On This Page</div>
+    <ul class="toc-list">
+      <li><a href="#acceptance" class="active">1. Acceptance of Terms</a></li>
+      <li><a href="#services">2. Description of Services</a></li>
+      <li><a href="#account">3. Account Registration</a></li>
+      <li><a href="#subscription">4. Subscription & Billing</a></li>
+      <li><a href="#acceptable-use">5. Acceptable Use</a></li>
+      <li><a href="#content">6. Your Content & Data</a></li>
+      <li><a href="#ip">7. Intellectual Property</a></li>
+      <li><a href="#disclaimer">8. Disclaimers</a></li>
+      <li><a href="#liability">9. Limitation of Liability</a></li>
+      <li><a href="#termination">10. Termination</a></li>
+      <li><a href="#governing">11. Governing Law</a></li>
+      <li><a href="#changes">12. Changes to Terms</a></li>
+      <li><a href="#contact">13. Contact Us</a></li>
+    </ul>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="terms-content">
+
+    <div class="terms-section" id="acceptance">
+      <div class="terms-section-header">
+        <div class="terms-section-icon">✅</div>
+        <h2>1. Acceptance of Terms</h2>
+      </div>
+      <p>Welcome to Tour Expert AI. These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "you", or "your") and Tour Expert AI ("Company", "we", "us", or "our"), governing your access to and use of our website at <strong>tourexpertai.com</strong> and all related platforms, tools, and services (collectively, the "Services").</p>
+      <p>By creating an account, accessing, or using our Services in any manner, you confirm that you have read, understood, and agree to be bound by these Terms and our <a href="privacy-policy.html" style="color:var(--teal); text-decoration:none;">Privacy Policy</a>.</p>
+      <div class="highlight-box">
+        <span class="highlight-box-icon">ℹ️</span>
+        <span>If you are using our Services on behalf of a business or organisation, you represent that you have the authority to bind that entity to these Terms. In that case, "you" refers to that entity.</span>
+      </div>
+      <p>If you do not agree to these Terms, you must not access or use our Services.</p>
+    </div>
+
+    <div class="terms-section" id="services">
+      <div class="terms-section-header">
+        <div class="terms-section-icon">🌍</div>
+        <h2>2. Description of Services</h2>
+      </div>
+      <p>Tour Expert AI provides an AI-powered platform designed for tour agents and travel agencies. Our Services include:</p>
+      <ul>
+        <li>An intelligent chatbot that answers customer queries based on your uploaded tour catalogues</li>
+        <li>Automated tour package recommendation engine</li>
+        <li>WhatsApp marketing campaign management and bulk messaging tools</li>
+        <li>An agent dashboard with analytics and performance tracking</li>
+        <li>Website chatbot embed code for integration into your existing site</li>
+      </ul>
+      <p>We reserve the right to modify, suspend, or discontinue any part of the Services at any time with reasonable notice. We will not be liable to you or any third party for any such modification, suspension, or discontinuation.</p>
+    </div>
+
+    <div class="terms-section" id="account">
+      <div class="terms-section-header">
+        <div class="terms-section-icon">👤</div>
+        <h2>3. Account Registration</h2>
+      </div>
+
+      <h3>Eligibility</h3>
+      <p>You must be at least 18 years of age and have the legal capacity to enter into a binding agreement to use our Services. Our Services are intended for business use by tour agents and travel industry professionals.</p>
+
+      <h3>Account Security</h3>
+      <p>You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to:</p>
+      <ul>
+        <li>Provide accurate, current, and complete registration information</li>
+        <li>Keep your password secure and not share it with any third party</li>
+        <li>Notify us immediately at <a href="mailto:hello@tourexpertai.com" style="color:var(--teal); text-decoration:none;">hello@tourexpertai.com</a> if you suspect any unauthorised access</li>
+        <li>Ensure only authorised personnel access your account</li>
+      </ul>
+      <p>Tour Expert AI cannot and will not be liable for any loss or damage arising from your failure to maintain adequate account security.</p>
+    </div>
+
+    <div class="terms-section" id="subscription">
+      <div class="terms-section-header">
+        <div class="terms-section-icon">💳</div>
+        <h2>4. Subscription & Billing</h2>
+      </div>
+
+      <h3>Free Trial</h3>
+      <p>We offer a 14-day free trial with access to all features. No credit card is required to start a trial. At the end of the trial period, you may choose a paid subscription plan to continue using the Services.</p>
+
+      <h3>Paid Plans</h3>
+      <p>Subscription fees are billed in advance on a monthly or annual basis depending on your chosen plan. All prices are in Malaysian Ringgit (MYR) unless stated otherwise.</p>
+
+      <table class="plan-table">
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Billing Cycle</th>
+            <th>Renewal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Starter</td>
+            <td>Monthly</td>
+            <td>Auto-renews monthly</td>
+          </tr>
+          <tr>
+            <td>Professional</td>
+            <td>Monthly or Annual</td>
+            <td>Auto-renews on cycle</td>
+          </tr>
+          <tr>
+            <td>Agency</td>
+            <td>Annual</td>
+            <td>Auto-renews annually</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Cancellation & Refunds</h3>
+      <p>You may cancel your subscription at any time from your account dashboard. Cancellation takes effect at the end of the current billing period — you will retain access to the Services until that date.</p>
+      <div class="warning-box">
+        <span class="warning-box-icon">⚠️</span>
+        <span>We do not offer refunds for partial billing periods or unused features. Annual plan refunds may be considered on a case-by-case basis if requested within 7 days of renewal. Please contact us to discuss.</span>
+      </div>
+
+      <h3>Late Payments</h3>
+      <p>If payment fails, we will notify you and attempt to charge again within 3 days. If payment remains unsuccessful after 7 days, your account may be suspended until payment is resolved. Data is retained for 30 days after suspension before permanent deletion.</p>
+    </div>
+
+    <div class="terms-section" id="acceptable-use">
+      <div class="terms-section-header">
+        <div class="terms-section-icon">🚦</div>
+        <h2>5. Acceptable Use</h2>
+      </div>
+      <p>You agree to use the Services only for lawful purposes and in accordance with these Terms. You must not use the Services to:</p>
+
+      <h3>Prohibited Activities</h3>
+      <ul>
+        <li>Violate any applicable Malaysian or international laws or regulations</li>
+        <li>Send unsolicited bulk messages (spam) or messages to contacts who have not consented to receive them</li>
+        <li>Upload false, misleading, or fraudulent tour package information</li>
+        <li>Impersonate any person or entity or misrepresent your affiliation</li>
+        <li>Upload content containing viruses, malware, or any harmful code</li>
+        <li>Attempt to reverse-engineer, decompile, or extract the source code of our platform</li>
+        <li>Resell, sublicense, or commercially redistribute access to the Services without our written consent</li>
+        <li>Use automated scripts or bots to scrape, crawl, or excessively load our platform</li>
+        <li>Harass, abuse, or harm any person through the use of our Services</li>
+      </ul>
+
+      <h3>WhatsApp Campaign Compliance</h3>
+      <p>When using our WhatsApp campaign tools, you are solely responsible for ensuring compliance with WhatsApp's Business Policy, Malaysia's Communications and Multimedia Act 1998, and the Personal Data Protection Act 2010 (PDPA). You must only send messages to contacts who have provided explicit consent to be contacted by your business.</p>
+      <div class="highlight-box">
+        <span class="highlight-box-icon">📋</span>
+        <span>We reserve the right to suspend or terminate accounts that we reasonably believe are in violation of applicable messaging laws or WhatsApp's usage policies.</span>
+      </div>
+    </div>
+
+    <div class="terms-section" id="content">
+      <div class="terms-section-header">
+        <div class="terms-section-icon">📦</div>
+        <h2>6. Your Content & Data</h2>
+      </div>
+
+      <h3>Ownership</h3>
+      <p>You retain full ownership of all content you upload to Tour Expert AI, including your tour catalogues, pricing documents, customer databases, and any other materials ("Your Content"). We do not claim any ownership rights over Your Content.</p>
+
+      <h3>Licence to Us</h3>
+      <p>By uploading Your Content, you grant Tour Expert AI a limited, non-exclusive, royalty-free licence to store, process, and use Your Content solely for the purpose of providing the Services to you. This licence ends when you delete the content or close your account.</p>
+
+      <h3>Your Responsibilities</h3>
+      <p>You are solely responsible for Your Content and warrant that:</p>
+      <ul>
+        <li>You have all necessary rights to upload and use the content</li>
+        <li>Your Content does not infringe any third-party intellectual property rights</li>
+        <li>Any customer data you upload has been collected with proper consent under PDPA</li>
+        <li>Your Content does not contain any unlawful, defamatory, or harmful material</li>
+      </ul>
+
+      <h3>Data Isolation</h3>
+      <p>Your uploaded tour catalogues and customer databases are stored in isolation and are never shared with, or accessible by, other Tour Expert AI users. We do not use Your Content to train shared AI models.</p>
+    </div>
+
+    <div class="terms-section" id="ip">
+      <div class="terms-section-header">
+        <div class="terms-section-icon">©️</div>
+        <h2>7. Intellectual Property</h2>
+      </div>
+      <p>All rights, title, and interest in and to the Tour Expert AI platform — including its software, design, interfaces, algorithms, trademarks, logos, and documentation — are and remain the exclusive property of Tour Expert AI and its licensors.</p>
+      <p>Nothing in these Terms grants you any right to use our trademarks, brand names, logos, or domain names without our prior written consent.</p>
+      <p>You may not copy, modify, distribute, sell, or create derivative works of our platform or any part of the Services without express written permission from us.</p>
+    </div>
+
+    <div class="terms-section" id="disclaimer">
+      <div class="terms-section-header">
+        <div class="terms-section-icon">⚠️</div>
+        <h2>8. Disclaimers</h2>
+      </div>
+      <p>The Services are provided on an <strong>"as is"</strong> and <strong>"as available"</strong> basis, without warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+      <p>We do not warrant that:</p>
+      <ul>
+        <li>The Services will be uninterrupted, error-free, or completely secure</li>
+        <li>AI-generated responses will always be accurate, complete, or appropriate for your use case</li>
+        <li>The Services will meet your specific business requirements</li>
+        <li>Any errors or defects will be corrected within a specific timeframe</li>
+      </ul>
+      <div class="warning-box">
+        <span class="warning-box-icon">⚠️</span>
+        <span>Tour Expert AI is an AI-assisted tool. You remain responsible for reviewing AI-generated content before sharing it with customers, and for all business decisions made based on information from the platform.</span>
+      </div>
+    </div>
+
+    <div class="terms-section" id="liability">
+      <div class="terms-section-header">
+        <div class="terms-section-icon">⚖️</div>
+        <h2>9. Limitation of Liability</h2>
+      </div>
+      <p>To the fullest extent permitted by applicable law, Tour Expert AI and its directors, employees, partners, and suppliers shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
+      <ul>
+        <li>Loss of profits, revenue, data, or business opportunities</li>
+        <li>Damage to goodwill or reputation</li>
+        <li>Cost of substitute services</li>
+        <li>Any damages resulting from unauthorised access to your account or data</li>
+      </ul>
+      <p>In no event shall our total aggregate liability to you exceed the total amount paid by you to Tour Expert AI in the twelve (12) months immediately preceding the event giving rise to the claim.</p>
+      <p>Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability for certain types of damages, so some of the above limitations may not apply to you.</p>
+    </div>
+
+    <div class="terms-section" id="termination">
+      <div class="terms-section-header">
+        <div class="terms-section-icon">🔚</div>
+        <h2>10. Termination</h2>
+      </div>
+
+      <h3>By You</h3>
+      <p>You may terminate your account at any time by cancelling your subscription through the dashboard or by contacting us. Upon termination, your access to the Services will end at the close of the current billing period.</p>
+
+      <h3>By Us</h3>
+      <p>We reserve the right to suspend or permanently terminate your account, with or without notice, if we determine that you have:</p>
+      <ul>
+        <li>Violated any provision of these Terms</li>
+        <li>Engaged in fraudulent, abusive, or illegal activity</li>
+        <li>Failed to pay subscription fees after the grace period</li>
+        <li>Used the Services in a way that causes harm to others or to our platform</li>
+      </ul>
+
+      <h3>Effect of Termination</h3>
+      <p>Upon termination, your right to access the Services ceases immediately. We will retain your data for up to 30 days after termination, during which you may request an export. After this period, your data will be permanently deleted from our systems.</p>
+    </div>
+
+    <div class="terms-section" id="governing">
+      <div class="terms-section-header">
+        <div class="terms-section-icon">🏛️</div>
+        <h2>11. Governing Law & Disputes</h2>
+      </div>
+      <p>These Terms shall be governed by and construed in accordance with the laws of Malaysia, without regard to its conflict of law principles.</p>
+      <p>Any dispute, controversy, or claim arising out of or in connection with these Terms, or the breach, termination, or validity thereof, shall first be attempted to be resolved through good-faith negotiation between the parties.</p>
+      <p>If a dispute cannot be resolved through negotiation within 30 days, it shall be submitted to the exclusive jurisdiction of the courts of Kuala Lumpur, Malaysia.</p>
+    </div>
+
+    <div class="terms-section" id="changes">
+      <div class="terms-section-header">
+        <div class="terms-section-icon">🔄</div>
+        <h2>12. Changes to These Terms</h2>
+      </div>
+      <p>We reserve the right to update or modify these Terms at any time. When we make material changes, we will:</p>
+      <ul>
+        <li>Update the "Last updated" date at the top of this page</li>
+        <li>Notify registered users via email at least 14 days before changes take effect</li>
+        <li>Display a prominent notice on our platform dashboard</li>
+      </ul>
+      <p>Your continued use of the Services after the effective date of any changes constitutes your acceptance of the revised Terms. If you do not agree to the updated Terms, you must stop using the Services and cancel your account before the changes take effect.</p>
+    </div>
+
+    <div class="terms-section" id="contact">
+      <div class="terms-section-header">
+        <div class="terms-section-icon">📬</div>
+        <h2>13. Contact Us</h2>
+      </div>
+      <p>If you have any questions about these Terms of Service, please contact us:</p>
+      <div class="contact-strip">
+        <div class="contact-strip-text">
+          <h3>Legal enquiries</h3>
+          <p>Email us at hello@tourexpertai.com<br/>or use our contact form — we reply within 24 hours.</p>
+        </div>
+        <a href="contact.html" class="btn-primary">Contact Us →</a>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Tour Expert AI</div>
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="contact.html">Contact Us</a>
+    <!--<a href="#">Support</a>-->
+  </div>
+  <div class="footer-copy">© 2026 Tour Expert AI. All rights reserved.</div>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('.terms-section');
+  const tocLinks = document.querySelectorAll('.toc-list a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(link => link.classList.remove('active'));
+        const id = entry.target.getAttribute('id');
+        const active = document.querySelector(`.toc-list a[href="#${id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
