@@ -51,7 +51,41 @@ export default async function handler(request) {
       });
     }
 
-    return new Response(upstream.body, {
+    // Pipe upstream SSE and inject keep-alive comments every 10s
+    // to prevent Netlify from killing the connection during long waits
+    const reader = upstream.body.getReader();
+    const encoder = new TextEncoder();
+    let heartbeatTimer = null;
+
+    const stream = new ReadableStream({
+      async start(controller) {
+        const sendHeartbeat = () => {
+          try {
+            controller.enqueue(encoder.encode(': keep-alive\n\n'));
+          } catch { /* stream closed */ }
+        };
+        heartbeatTimer = setInterval(sendHeartbeat, 10000);
+
+        try {
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            controller.enqueue(value);
+          }
+        } catch (e) {
+          controller.error(e);
+        } finally {
+          clearInterval(heartbeatTimer);
+          controller.close();
+        }
+      },
+      cancel() {
+        clearInterval(heartbeatTimer);
+        reader.cancel();
+      },
+    });
+
+    return new Response(stream, {
       headers: {
         'Content-Type': 'text/event-stream',
         'Cache-Control': 'no-cache',

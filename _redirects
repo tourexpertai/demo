@@ -1,1 +1,2 @@
-# Chat API is handled by /.netlify/functions/chat
+# Demo page hosted on our server (streaming support)
+/demo  https://remarks-highway-opinion-collar.trycloudflare.com/demo  302
